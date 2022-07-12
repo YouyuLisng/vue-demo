@@ -1,5 +1,5 @@
 <template>
-  <div class="from-pic row">
+  <div class="from-pic row mx-auto">
     <div class="h3 text-center mt-4 text-white">聯絡我們</div>
     <div class="mx-auto col-10 col-md-6">
       <FormView class="row gy-3 p-3 p-md-5 formcontrol mt-3 mb-5" v-slot="{ errors }" @submit="onSubmit" >
