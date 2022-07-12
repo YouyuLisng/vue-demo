@@ -2,6 +2,24 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
+    path: '/',
+    component: () => import('../views/HomeUserView.vue'),
+    children: [
+      {
+        path: 'frontpage',
+        component: () => import('../views/UserView.vue')
+      },
+      {
+        path: 'cart',
+        component: () => import('../views/UsercartView.vue')
+      },
+      {
+        path: 'product/:productId',
+        component: () => import('../views/UserproductView.vue')
+      }
+    ]
+  },
+  {
     path: '/login',
     component: () => import('../views/Login-LG.vue')
   },
@@ -20,24 +38,6 @@ const routes = [
       {
         path: 'temp',
         component: () => import('../views/DiscountView.vue')
-      }
-    ]
-  },
-  {
-    path: '/',
-    component: () => import('../views/HomeUserView.vue'),
-    children: [
-      {
-        path: 'frontpage',
-        component: () => import('../views/UserView.vue')
-      },
-      {
-        path: 'cart',
-        component: () => import('../views/UsercartView.vue')
-      },
-      {
-        path: 'product/:productId',
-        component: () => import('../views/UserproductView.vue')
       }
     ]
   },
