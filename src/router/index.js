@@ -34,10 +34,6 @@ const routes = [
     component: () => import('../views/HomeUserView.vue'),
     children: [
       {
-        path: 'frontpage',
-        component: () => import('../views/UserView.vue')
-      },
-      {
         path: 'cart',
         component: () => import('../views/UsercartView.vue')
       },

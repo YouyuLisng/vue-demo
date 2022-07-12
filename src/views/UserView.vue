@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import emitter from '@/methods/emitter'
 import Nav from '@/components/NavUser.vue'
 import Banner from '@/components/BannerView.vue'
 import Section from '@/components/SectionView.vue'
@@ -22,6 +23,11 @@ export default {
   data () {
     return {
       isLoading: false
+    }
+  },
+  provide () {
+    return {
+      emitter
     }
   },
   components: {

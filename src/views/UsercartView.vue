@@ -216,7 +216,6 @@
 </style>
 <script>
 import 'animate.css'
-import emitter from '@/methods/emitter'
 import Nav from '@/components/NavUser.vue'
 import From from '@/components/FromView.vue'
 import Footer from '@/components/FooterView.vue'
@@ -242,11 +241,6 @@ export default {
     ...mapState(productList, ['sortproducts']),
     ...mapState(statusStore, ['isLoading']),
     ...mapState(cart, ['cart'])
-  },
-  provide () {
-    return {
-      emitter
-    }
   },
   methods: {
     ...mapActions(productList, ['getProducts']),

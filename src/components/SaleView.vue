@@ -46,7 +46,7 @@
 
 <style>
 .chiar{
-  background-image: url(../images/hutomo-abrianto-Q_fZcn8vlWY-unsplash.jpg);
+  background-image: url(../images/pic/沙發/000000000014323082-gallery-01-20220316175145344.jpeg);
   background-position: center center;
   background-size: cover;
   width: 100%;
