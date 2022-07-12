@@ -39,7 +39,7 @@
       ></button>
     </div>
     <div class="offcanvas-body">
-      <div class="cart d-flex" v-for="item in cart.carts" :key="item.id">
+      <div class="cart d-flex justify-content-evenly" v-for="item in cart.carts" :key="item.id">
         <img class="pb-3" :src="item.product.imageUrl" alt="" />
         <div class="cart-info ms-3">
           <p class="fs-5 m-0">{{ item.product.title }}</p>
@@ -208,6 +208,10 @@
 }
 .shopping:hover{
   background-color: #b4d4ee;
+}
+.cart img{
+  width: 30%;
+  height: 30%;
 }
 </style>
 <script>
