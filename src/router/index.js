@@ -3,16 +3,12 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    component: () => import('../views/HomeUserView.vue'),
+    component: () => import('../views/UsercartView.vue')
+  },
+  {
+    path: 'cart',
+    component: () => import('../views/UsercartView.vue'),
     children: [
-      {
-        path: 'frontpage',
-        component: () => import('../views/UserView.vue')
-      },
-      {
-        path: 'cart',
-        component: () => import('../views/UsercartView.vue')
-      },
       {
         path: 'product/:productId',
         component: () => import('../views/UserproductView.vue')
