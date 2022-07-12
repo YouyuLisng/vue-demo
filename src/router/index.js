@@ -1,19 +1,11 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import Home from '../views/UserView'
 
 const routes = [
   {
     path: '/',
-    component: () => import('../views/UsercartView.vue')
-  },
-  {
-    path: 'cart',
-    component: () => import('../views/UsercartView.vue'),
-    children: [
-      {
-        path: 'product/:productId',
-        component: () => import('../views/UserproductView.vue')
-      }
-    ]
+    name: 'home',
+    component: Home
   },
   {
     path: '/login',
@@ -34,6 +26,24 @@ const routes = [
       {
         path: 'temp',
         component: () => import('../views/DiscountView.vue')
+      }
+    ]
+  },
+  {
+    path: '/user',
+    component: () => import('../views/HomeUserView.vue'),
+    children: [
+      {
+        path: 'frontpage',
+        component: () => import('../views/UserView.vue')
+      },
+      {
+        path: 'cart',
+        component: () => import('../views/UsercartView.vue')
+      },
+      {
+        path: 'product/:productId',
+        component: () => import('../views/UserproductView.vue')
       }
     ]
   },

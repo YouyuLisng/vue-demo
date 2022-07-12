@@ -2,7 +2,7 @@
   <div class="container-fuild" style="margin-bottom: 58px">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container-fluid">
-        <router-link class="nav-link active" to="/user/frontpage">
+        <router-link class="nav-link active" to="/">
         LOGO
         </router-link>
         <button
