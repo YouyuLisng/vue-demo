@@ -17,7 +17,7 @@
           <router-link class="nav-link active" to="/dashboard/temp">優惠卷</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link active" to="/login">登出</router-link>
+          <router-link class="nav-link active" to="/">登出</router-link>
         </li>
       </ul>
     </div>
