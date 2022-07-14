@@ -1,4 +1,4 @@
-# vue-homework
+# vue
 
 ## Project setup
 ```
