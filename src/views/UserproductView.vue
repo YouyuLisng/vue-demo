@@ -1,8 +1,20 @@
 <template>
   <LoadingView :active="isLoading"></LoadingView>
   <Nav></Nav>
-  <div class="container-fuild">
+  <div class="container-fuild position-relative">
     <div class="img-fluid productbanner">
+       <div class="position-absolute top-50 start-50 translate-middle">
+      <h3
+        class="
+          text-white text-center
+          lh-base
+          productTitle
+          animate__animated animate__fadeInDown animate__delay-1s
+        "
+      >
+        商品資訊
+      </h3>
+    </div>
     </div>
   </div>
   <div class="container">
@@ -77,6 +89,11 @@
 .product-pic img{
   max-height: 450px;
   position: relative;
+}
+.productTitle {
+  padding: 1em;
+  background-color: rgb(59, 142, 165, 0.5);
+  opacity: 0.8;
 }
 </style>
 

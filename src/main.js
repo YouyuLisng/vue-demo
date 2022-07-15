@@ -11,6 +11,7 @@ import { localize, setLocale } from '@vee-validate/i18n'
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { createPinia } from 'pinia'
+import 'bootstrap'
 defineRule('required', required)
 defineRule('email', email)
 defineRule('min', min)
