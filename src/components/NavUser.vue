@@ -17,7 +17,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
               <router-link class="nav-link active text-success" to="/user/cart"
                 >商品</router-link

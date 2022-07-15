@@ -11,6 +11,7 @@ import { localize, setLocale } from '@vee-validate/i18n'
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { createPinia } from 'pinia'
+import $ from 'jquery'
 import 'bootstrap'
 defineRule('required', required)
 defineRule('email', email)
@@ -20,6 +21,7 @@ configure({
   validateOnInput: true // 當輸入任何內容直接進行驗證
 })
 setLocale('zh_TW')
+window.$ = $
 const pinia = createPinia()
 const app = createApp(App)
 app.use(pinia)
