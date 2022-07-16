@@ -41,14 +41,12 @@
                     <hr>
                     <p class="col-9">總計</p>
                     <div class="col-3">{{total}}</div>
-                    <div class="row">
-                    <button type="button" class="btn btn-success mt-1">送出訂單</button>
-                </div>
                 </div>
             </div>
         </div>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <style>
@@ -75,6 +73,7 @@
 </style>
 
 <script>
+import Footer from '@/components/FooterView.vue'
 import OrderInfo from '@/components/OrderInfo.vue'
 import axios from 'axios'
 export default {
@@ -85,7 +84,8 @@ export default {
     }
   },
   components: {
-    OrderInfo
+    OrderInfo,
+    Footer
   },
   methods: {
     getCart () {

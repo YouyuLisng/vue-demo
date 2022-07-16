@@ -29,7 +29,7 @@
              <error-message name="訊息" class="invalid-feedback"></error-message>
         </span>
         <div class="text-end">
-            <button type="submit" class="btn btn-warning">送出</button>
+            <button type="submit" class="btn btn-warning">送出訂單</button>
         </div>
       </FormView>
     </div>
