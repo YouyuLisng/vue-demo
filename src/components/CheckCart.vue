@@ -1,18 +1,17 @@
 <template>
-  <div class="cart-table d-flex container p-3 mt-5">
+  <div class="cart-table d-flex container p-3 mt-5 text-white">
     <div class="col-3" style="flex-basis: 30%">商品名稱</div>
-    <div class="col-1" style="flex-basis: 10%">規格</div>
-    <div class="col-1" style="flex-basis: 10%">單價</div>
+    <div class="col-1" style="flex-basis: 20%">單價</div>
     <div class="col-1" style="flex-basis: 20%">數量</div>
     <div class="col-3" style="flex-basis: 15%">金額</div>
-    <div class="col-3" style="flex-basis: 15%">移除</div>
+    <div class="col-3" style="flex-basis: 15% ">移除</div>
   </div>
-  <div class="container mt-5 p-2 cart-list d-flex" v-for="item in cart.carts" :key="item.id">
+  <div class="container mt-5 cart-list d-flex mb-5 shadow p-1 mb-3 bg-body rounded" v-for="item in cart.carts" :key="item.id">
     <div class="col-3 d-flex align-items-center" style="flex-basis: 30%">
-        {{item.product.title}}
+        <img class="me-5 pic" :src="item.product.imageUrl" alt="" />
+        <span class="d-none d-md-block">{{item.product.title}}</span>
     </div>
-    <div class="col-1 d-flex align-items-center" style="flex-basis: 10%"></div>
-    <div class="col-1 d-flex align-items-center" style="flex-basis: 10%">
+    <div class="col-1 d-flex align-items-center text" style="flex-basis: 20%">
         {{item.product.price}}
     </div>
     <div class="col-1 d-flex align-items-center" style="flex-basis: 20%">
@@ -27,26 +26,66 @@
           </button>
     </div>
   </div>
+  <div class="row flex-column-reverse flex-md-row">
+    <div class="col-md-6">
+        <OrderInfo></OrderInfo>
+    </div>
+    <div class="col-md-6 mt-5 pt-5">
+        <div class="row">
+            <div class="col-10 mx-auto shadow p-1 mb-3 bg-body rounded">
+                <div class="row m-5">
+                    <p class="col-9">小計</p>
+                    <div class="col-3">{{total}}</div>
+                    <p class="col-9">運費</p>
+                    <div class="col-3">免費</div>
+                    <hr>
+                    <p class="col-9">總計</p>
+                    <div class="col-3">{{total}}</div>
+                    <div class="row">
+                    <button type="button" class="btn btn-success mt-1">送出訂單</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 </template>
 
 <style>
 .cart-table {
-  background-color: #00a6a6;
+  background-color: #386150;
   border-radius: 10px;
 }
 .cart-list{
-    border: 1px solid #000;
     border-radius: 5px;
+}
+.pic{
+    display: flex;
+    align-items: center;
+    max-width: 150px;
+    height: 150px;
+}
+@media(max-width:500px){
+    .pic{
+        width: 90px;
+        height: 90px;
+        margin: 0;
+    }
 }
 </style>
 
 <script>
+import OrderInfo from '@/components/OrderInfo.vue'
 import axios from 'axios'
 export default {
   data () {
     return {
-      cart: {}
+      cart: {},
+      total: null
     }
+  },
+  components: {
+    OrderInfo
   },
   methods: {
     getCart () {
@@ -56,6 +95,7 @@ export default {
         this.cart = response.data.data
         // status.isLoading = false
         console.log(this.cart)
+        this.total = this.cart.total
       })
     },
     delcart (id) {
