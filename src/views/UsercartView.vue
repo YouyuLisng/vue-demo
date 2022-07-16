@@ -54,6 +54,7 @@
               />
               <div class="input-group-text">/ {{ item.product.unit }}</div>
             </div>
+          <p class="pt-2 fs-5">NT${{ item.total }}</p>
           <p class="pt-2 fs-5">NT${{ item.final_total }}</p>
         </div>
         <div class="mt-4">

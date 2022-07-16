@@ -63,10 +63,6 @@ const routes = [
         }
       }
     ]
-  },
-  {
-    path: '/test',
-    component: () => import('../components/OffcanceView.vue')
   }
 ]
 

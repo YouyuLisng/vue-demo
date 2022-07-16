@@ -41,7 +41,7 @@
           />
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 mb-5 col-11 mx-auto">
         <h2 class="text-center pb-3">{{ product.title }}</h2>
         <div class="fs-5">{{ product.content }}</div>
         <div class="position-relative">
