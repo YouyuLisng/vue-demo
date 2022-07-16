@@ -32,7 +32,7 @@ export default defineStore('cartStore', {
         this.cart = response.data.data
         status.isLoading = false
         this.total = this.cart.total
-        console.log(this.total)
+        console.log(this.cart.carts)
       })
     },
     updateCart (item) {

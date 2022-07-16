@@ -61,6 +61,10 @@ const routes = [
         meta: {
           title: '商品資訊'
         }
+      },
+      {
+        path: 'order',
+        component: () => import('../views/CheckOrderView.vue')
       }
     ]
   }
