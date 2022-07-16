@@ -54,8 +54,7 @@
               />
               <div class="input-group-text">/ {{ item.product.unit }}</div>
             </div>
-          <p class="pt-2 fs-5">NT${{ item.total }}</p>
-          <p class="pt-2 fs-5">NT${{ item.final_total }}</p>
+          <p class="pt-2 fs-5">NT${{ item.product.price }}</p>
         </div>
         <div class="mt-4">
           <button type="button" class="btn btn-danger" style="margin-top:10px;" @click="delcart(item.id)">
@@ -63,7 +62,12 @@
           </button>
         </div>
       </div>
-      <button type="button" class="btn btn-warning float-end mt-3">結帳</button>
+      <div class="row">
+        <div class="text-end">
+          <span class="text-danger me-4 mt-2" style="font-size:24px">總計:{{ total }}</span>
+           <button type="button" class="btn btn-warning mb-1">結帳</button>
+        </div>
+      </div>
     </div>
     </div>
     </div>
@@ -241,7 +245,7 @@ export default {
   computed: {
     ...mapState(productList, ['sortproducts']),
     ...mapState(statusStore, ['isLoading']),
-    ...mapState(cart, ['cart'])
+    ...mapState(cart, ['cart', 'total'])
   },
   methods: {
     ...mapActions(productList, ['getProducts']),

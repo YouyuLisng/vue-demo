@@ -5,7 +5,8 @@ import statusStore from '@/stores/statusStore'
 const status = statusStore()
 export default defineStore('cartStore', {
   state: () => ({
-    cart: {}
+    cart: {},
+    total: null
   }),
   actions: {
     addToCart (id, qty = 1) {
@@ -30,7 +31,8 @@ export default defineStore('cartStore', {
       axios.get(url).then((response) => {
         this.cart = response.data.data
         status.isLoading = false
-        console.log(response)
+        this.total = this.cart.total
+        console.log(this.total)
       })
     },
     updateCart (item) {
