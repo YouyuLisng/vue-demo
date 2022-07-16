@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="position-relative border-top mt-5 mb-5">
-        <button type="button" class="btn btn-warning position-absolute start-50 translate-middle">購買商品！</button>
+        <router-link class="btn btn-warning position-absolute start-50 translate-middle" to="/user/cart">購買商品！</router-link>
       </div>
     </section>
   </div>

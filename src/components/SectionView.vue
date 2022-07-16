@@ -19,7 +19,7 @@
               <p class="text-left mb-4">
                 依照你的需求，挑選可調整桌面高度、活動桌板的書桌或工作桌，讓你讀書、工作都更有效率。
               </p>
-              <button
+              <router-link
                 type="button"
                 class="
                   btn btn-outline-warning
@@ -28,9 +28,10 @@
                   start-50
                   translate-middle
                 "
+                to="/user/cart"
               >
                 View-More
-              </button>
+              </router-link>
             </div>
           </div>
         </div>
@@ -46,7 +47,7 @@
               <p class="text-left mb-4">
                 不管是窩在沙發上看電視或是準備晚餐的溫馨過程，點盞燈都可以讓氣氛更舒適，空間更明亮！
               </p>
-              <button
+              <router-link
                 type="button"
                 class="
                   btn btn-outline-warning
@@ -55,9 +56,10 @@
                   start-50
                   translate-middle
                 "
+                to="/user/cart"
               >
                 View-More
-              </button>
+              </router-link>
             </div>
           </div>
         </div>
@@ -73,7 +75,7 @@
               <p class="text-left mb-4">
                 我們知道你有時只想抓本書，享受一個人的時光，因此提供多功能性的椅子，久坐依然舒適。
               </p>
-              <button
+              <router-link
                 type="button"
                 class="
                   btn btn-outline-warning
@@ -82,9 +84,10 @@
                   start-50
                   translate-middle
                 "
+                to="/user/cart"
               >
                 View-More
-              </button>
+              </router-link>
             </div>
           </div>
         </div>
