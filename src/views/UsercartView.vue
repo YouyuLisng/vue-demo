@@ -83,14 +83,14 @@
         <h3 class="">商品列表</h3>
         <div class="line mx-auto"></div>
       </div>
-      <div class="mx-auto text-center">
+      <!-- <div class="mx-auto text-center">
         <ul class="list p-0">
           <li class="active">全部家俱</li>
           <li class="active">沙發</li>
           <li class="active">椅子</li>
           <li class="active">桌子</li>
         </ul>
-      </div>
+      </div> -->
       <div class="row">
         <div
           class="col-xl-3 col-lg-4 col-sm-6 px-xl-3 px-2 gy-5"
