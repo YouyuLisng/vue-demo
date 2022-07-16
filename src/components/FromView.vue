@@ -35,7 +35,7 @@
 .from-pic {
   background-image: url(../images/christin-hume-hBuwVLcYTnA-unsplash.jpg);
   width: 100%;
-  height: 550px;
+  height: auto;
   background-size: cover;
   background-position: center center;
 }
