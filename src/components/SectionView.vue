@@ -58,7 +58,7 @@
                 "
                 to="/user/cart"
               >
-                View-More 111
+                View-More
               </router-link>
             </div>
           </div>
