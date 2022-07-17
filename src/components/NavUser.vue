@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
         <router-link class="nav-link active" to="/">
-        LOGO
+        HOME Furniture
         </router-link>
         <button
           class="navbar-toggler"
