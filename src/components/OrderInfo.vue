@@ -59,8 +59,8 @@ export default {
       this.$http.post(url, { data: order })
         .then((res) => {
           console.log(res.data.orderId)
-          this.orderId = res.dataId
-          this.$router.push('/user/checkout/:orderId')
+          const orderId = res.data.orderId
+          this.$router.push(`/user/checkout/${orderId}`)
         })
     }
   }

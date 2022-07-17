@@ -73,20 +73,20 @@ export default {
       this.$http.get(url)
         .then((res) => {
           if (res.data.success) {
-            this.order = res.data.orders
-            console.log(this.order)
+            console.log(res.data.order)
+            this.order = res.data.order
           }
         })
     },
     payOrder () {
-    //   const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/pay/${this.orderId}`
-    //   this.$http.post(url)
-    //     .then((res) => {
-    //       console.log(res)
-    //       if (res.data.success) {
-    //         this.getOrder()
-    //       }
-    //     })
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/pay/${this.orderId}`
+      this.$http.post(url)
+        .then((res) => {
+          console.log(res)
+          if (res.data.success) {
+            this.getOrder()
+          }
+        })
     }
   },
   created () {
