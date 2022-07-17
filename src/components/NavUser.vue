@@ -46,7 +46,7 @@
 .logo{
   color:#000;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 1000;
   font-family: Marcellus SC, serif;
 }
 .nav{
