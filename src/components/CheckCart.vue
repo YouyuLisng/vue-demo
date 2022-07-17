@@ -1,4 +1,5 @@
 <template>
+<LoadingView :active="isLoading"></LoadingView>
   <div class="cart-table d-flex container p-3 mt-5 text-white">
     <div class="col-3" style="flex-basis: 30%">商品名稱</div>
     <div class="col-1" style="flex-basis: 20%">單價</div>
@@ -26,7 +27,7 @@
           </button>
     </div>
   </div>
-  <div class="row flex-column-reverse flex-md-row">
+  <div class="row flex-column-reverse flex-md-row mt-5">
     <div class="col-md-6">
         <OrderInfo></OrderInfo>
     </div>
@@ -76,6 +77,9 @@
 import Footer from '@/components/FooterView.vue'
 import OrderInfo from '@/components/OrderInfo.vue'
 import axios from 'axios'
+import { mapState } from 'pinia'
+import statusStore from '@/stores/statusStore'
+const status = statusStore()
 export default {
   data () {
     return {
@@ -87,13 +91,16 @@ export default {
     OrderInfo,
     Footer
   },
+  computed: {
+    ...mapState(statusStore, ['isLoading'])
+  },
   methods: {
     getCart () {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`
-      //   status.isLoading = true
+      status.isLoading = true
       axios.get(url).then((response) => {
         this.cart = response.data.data
-        // status.isLoading = false
+        status.isLoading = false
         console.log(this.cart)
         this.total = this.cart.total
       })
@@ -101,13 +108,13 @@ export default {
     delcart (id) {
       //   status.cartLodaingItem = id
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart/${id}`
-      //   status.isLoading = true
+      status.isLoading = true
       axios.delete(url).then((response) => {
         console.log(response)
-        // status.pushMessage({ title: '移除購物車品項', content: response.data.message })
+        status.pushMessage({ title: '移除購物車品項', content: response.data.message })
         // status.cartLodaingItem = ''
         this.getCart()
-        // status.isLoading = false
+        status.isLoading = false
       })
     }
   },

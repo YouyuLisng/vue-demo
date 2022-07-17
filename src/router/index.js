@@ -64,7 +64,17 @@ const routes = [
       },
       {
         path: 'order',
-        component: () => import('../views/CheckOrderView.vue')
+        component: () => import('../views/CheckOrderView.vue'),
+        meta: {
+          title: '結帳'
+        }
+      },
+      {
+        path: 'checkout/:orderId',
+        component: () => import('../views/PayView.vue'),
+        meta: {
+          title: '確認訂單'
+        }
       }
     ]
   }

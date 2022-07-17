@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center fs-3 pt-3" style="font-family: Marcellus SC, serif">
+  <div class="text-center fs-3 pt-3 mt-5 ms-4" style="font-family: Marcellus SC, serif">
     結帳囉！
   </div>
   <div class="pt-5 container">

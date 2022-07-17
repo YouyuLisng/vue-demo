@@ -1,6 +1,6 @@
 <template>
   <div class="container-fuild">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav mb-5">
       <div class="container">
         <router-link class="nav-link active logo" to="/">
         HOME Furniture
