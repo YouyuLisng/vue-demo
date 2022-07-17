@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid mt-4">
+<div class="container-fluid">
   <Toast></Toast>
   <router-view />
 </div>

@@ -1,8 +1,8 @@
 <template>
-  <div class="container-fuild" style="margin-bottom: 58px">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fuild">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav">
       <div class="container">
-        <router-link class="nav-link active" to="/">
+        <router-link class="nav-link active logo" to="/">
         HOME Furniture
         </router-link>
         <button
@@ -41,6 +41,18 @@
   </div>
   <register ref="registermodal"></register>
 </template>
+
+<style>
+.logo{
+  color:#000;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Marcellus SC, serif;
+}
+.nav{
+  opacity: 1;
+}
+</style>
 
 <script>
 import register from '@/components/RegisterView.vue'

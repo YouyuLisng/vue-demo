@@ -10,7 +10,6 @@
 
 <style>
 .banner{
-    margin-top: 56px;
     background-image:url(../images/roberto-nickson-bwIqQ5qQhXs-unsplash.jpg) ;
     background-position: center center;
     background-size: cover;
