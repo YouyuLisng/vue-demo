@@ -49,9 +49,6 @@
   font-weight: 1000;
   font-family: Marcellus SC, serif;
 }
-.nav{
-  opacity: 1;
-}
 </style>
 
 <script>
