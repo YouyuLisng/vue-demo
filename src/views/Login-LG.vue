@@ -1,4 +1,5 @@
 <template>
+<Toast></Toast>
 <div class="container">
 </div>
   <div class="container mt-5">
@@ -40,6 +41,8 @@
 </template>
 
 <script>
+import emitter from '@/methods/emitter'
+import Toast from '@/components/ToastList.vue'
 export default {
   data () {
     return {
@@ -47,6 +50,14 @@ export default {
         username: '',
         password: ''
       }
+    }
+  },
+  components: {
+    Toast
+  },
+  provide () {
+    return {
+      emitter
     }
   },
   inject: ['emitter'],

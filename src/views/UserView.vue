@@ -1,4 +1,8 @@
 <template>
+<div class="container-fluid mt-4">
+  <Toast></Toast>
+  <router-view />
+</div>
 <LoadingView :active="isLoading"></LoadingView>
  <Nav></Nav>
  <Banner></Banner>
@@ -11,6 +15,7 @@
 </template>
 
 <script>
+import Toast from '@/components/ToastList.vue'
 import emitter from '@/methods/emitter'
 import Nav from '@/components/NavUser.vue'
 import Banner from '@/components/BannerView.vue'
@@ -37,7 +42,8 @@ export default {
     Lottery,
     Sale,
     From,
-    Footer
+    Footer,
+    Toast
   }
 }
 </script>

@@ -237,6 +237,7 @@ export default {
       }
     }
   },
+  inject: ['emitter'],
   components: {
     Nav,
     From,

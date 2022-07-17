@@ -23,6 +23,9 @@ export default {
       delay: 6000
     })
     toast.show()
+  },
+  created () {
+    console.log('ok')
   }
 }
 </script>
