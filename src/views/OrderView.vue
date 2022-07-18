@@ -12,28 +12,21 @@
       <th width="120">購買款項</th>
       <th width="120">應付金額</th>
       <th width="100">是否付款</th>
-      <th width="200">編輯</th>
     </tr>
   </thead>
   <tbody>
     <tr v-for="item in orderproduct" :key="item.id">
-      <td>{{item.paid_date}}</td>
-      <td>{{item.Email}}</td>
+      <td>{{$filters.date(item.create_at)}}</td>
+      <td>{{item.user.email}}</td>
       <td class="text-right">
-        {{item.products}}
+        {{item.products.product}}
       </td>
       <td class="text-right">
-        {{item.total}}
+        {{item.total}}元
       </td>
       <td>
-        <span class="text-success" v-if="item.is_enabled">是否付款</span>
-        <span class="text-muted" v-else>未啟用</span>
-      </td>
-      <td>
-        <div class="btn-group">
-          <button class="btn btn-outline-primary btn-sm" @click="openorderModal">檢視</button>
-          <button class="btn btn-outline-danger btn-sm">刪除</button>
-        </div>
+        <span class="text-success" v-if="item.is_paid">已付款</span>
+        <span class="text-muted" v-else>未付款</span>
       </td>
     </tr>
   </tbody>
@@ -46,6 +39,7 @@ import ordermodal from '@/components/OderModal.vue'
 export default {
   data () {
     return {
+      creattime: null,
       orderproduct: [],
       pagination: {},
       tempProduct: {},
@@ -63,9 +57,10 @@ export default {
         .then((res) => {
           this.isLoading = false
           if (res.data.success) {
-            console.log(res.data)
-            this.products = res.data.products
+            console.log(res.data.orders[0])
+            this.orderproduct = res.data.orders
             this.pagination = res.data.pagination
+            this.creattime = res.data.creat_at
           }
         })
     },
@@ -73,6 +68,8 @@ export default {
       this.tempProduct = { ...item }
       const orderComponent = this.$refs.ordermodal
       orderComponent.showModal()
+    },
+    tiem () {
     }
   },
   created () {

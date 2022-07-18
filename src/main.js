@@ -13,6 +13,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import { createPinia } from 'pinia'
 import $ from 'jquery'
 import 'bootstrap'
+import { currency, date } from './methods/filters'
 defineRule('required', required)
 defineRule('email', email)
 defineRule('min', min)
@@ -24,6 +25,10 @@ setLocale('zh_TW')
 window.$ = $
 const pinia = createPinia()
 const app = createApp(App)
+app.config.globalProperties.$filters = {
+  currency,
+  date
+}
 app.use(pinia)
 app.use(VueAxios, axios)
 app.use(router)
