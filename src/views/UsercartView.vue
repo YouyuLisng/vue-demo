@@ -17,28 +17,19 @@
     </div>
   </div>
   <section>
-    <div class="container">
-       <a
-      class=" position-absolute position-fixed shopping"
-      @click.prevent="showOffcanvasMenu()"
-      >
-     <img src="../images/shopping-cart-01.svg" style="width:40px; height:40px;" alt="">
-       </a>
-    <div
-    class="offcanvas offcanvas-end"
-    :class="showMenu ? 'show' : ''"
-    tabindex="-1"
-    :style="{ visibility: showMenu ? 'visible' : 'hidden' }"
-  >
-    <div class="offcanvas-header" style="margin-top:10px;">
-      <h5 class="offcanvas-title">購物清單</h5>
-      <button
-        type="button"
-        class="btn-close text-reset"
-        @click.prevent="showOffcanvasMenu()"
-      ></button>
-    </div>
-    <div class="offcanvas-body">
+    <button  style="border-radius: 50%;" class="btn btn-primary test shopping" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 1em;"> {{cartqty}}</span>
+      <div class="cart">
+        <img style="width:40px; height:40px;" class="m-2" src="../images/shopping-cart.png" alt="">
+      </div>
+    </button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
       <div class="cart d-flex justify-content-evenly" v-for="item in cart.carts" :key="item.id">
         <img class="pb-3" :src="item.product.imageUrl" alt="" />
         <div class="cart-info ms-3">
@@ -69,8 +60,7 @@
         </div>
       </div>
     </div>
-    </div>
-    </div>
+</div>
     <div class="container mb-5">
       <div
         class="
@@ -194,7 +184,7 @@
 }
 .shopping{
   border-radius: 50%;
-  padding: 1em;
+  padding: 5px;
   border: 3px solid #A9A9A9;
   background-color: #A9A9A9;
   position: fixed;
@@ -203,12 +193,19 @@
   right: 30px;
   cursor: pointer;
 }
+.cart img {
+  width: 30%;
+  height: 30%;
+}
 .shopping:hover{
   background-color: #b4d4ee;
 }
-.cart img{
-  width: 30%;
-  height: 30%;
+.test{
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+  z-index: 10;
 }
 </style>
 <script>
@@ -238,7 +235,7 @@ export default {
   computed: {
     ...mapState(productList, ['sortproducts']),
     ...mapState(statusStore, ['isLoading']),
-    ...mapState(cart, ['cart', 'total'])
+    ...mapState(cart, ['cart', 'total', 'cartqty'])
   },
   methods: {
     ...mapActions(productList, ['getProducts']),

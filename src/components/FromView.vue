@@ -4,19 +4,19 @@
     <div class="mx-auto col-10 col-md-6">
       <FormView class="row gy-3 p-3 p-md-5 formcontrol mt-3 mb-5" v-slot="{ errors }" @submit="onSubmit" >
         <div class="col-md-6">
-          <FieldView type="text" name="姓氏" class="form-control" id="validationCustom03" :class="{ 'is-invalid': errors['姓氏'] }" rules="required" v-model="user.Fristname" placeholder="FristName"></FieldView>
+          <FieldView type="text" name="姓氏" class="form-control" id="validationCustom03" :class="{ 'is-invalid': errors['姓氏'] }" rules="required" v-model="user.Fristname" placeholder="姓氏"></FieldView>
           <error-message name="姓氏" class="invalid-feedback"></error-message>
         </div>
         <div class="col-md-6">
-          <FieldView type="text" name="姓名" class="form-control" id="validationCustom01" :class="{ 'is-invalid': errors['姓名'] }" rules="required" v-model="user.Lastname" placeholder="LastName"></FieldView>
+          <FieldView type="text" name="姓名" class="form-control" id="validationCustom01" :class="{ 'is-invalid': errors['姓名'] }" rules="required" v-model="user.Lastname" placeholder="名字"></FieldView>
           <error-message name="姓名" class="invalid-feedback"></error-message>
         </div>
          <div class="col-12">
-          <FieldView type="email" name="email" class="form-control" id="validationCustom02" :class="{ 'is-invalid': errors['email'] }" rules="email|required" v-model="user.email" placeholder="Emali"></FieldView>
+          <FieldView type="email" name="email" class="form-control" id="validationCustom02" :class="{ 'is-invalid': errors['email'] }" rules="email|required" v-model="user.email" placeholder="電子郵件"></FieldView>
           <error-message name="email" class="invalid-feedback"></error-message>
         </div>
          <div class="col-12">
-          <FieldView type="text" name="電話" class="form-control" id="validationCustom04" :class="{ 'is-invalid': errors['電話'] }" :rules="isPhone" v-model="user.Phone" placeholder="Phone"></FieldView>
+          <FieldView type="text" name="電話" class="form-control" id="validationCustom04" :class="{ 'is-invalid': errors['電話'] }" :rules="isPhone" v-model="user.Phone" placeholder="電話"></FieldView>
           <error-message name="電話" class="invalid-feedback"></error-message>
         </div>
         <span>

@@ -6,7 +6,8 @@ const status = statusStore()
 export default defineStore('cartStore', {
   state: () => ({
     cart: {},
-    total: null
+    total: null,
+    cartqty: null
   }),
   actions: {
     addToCart (id, qty = 1) {
@@ -32,7 +33,8 @@ export default defineStore('cartStore', {
         this.cart = response.data.data
         status.isLoading = false
         this.total = this.cart.total
-        console.log(this.cart.carts)
+        this.cartqty = this.cart.carts.length
+        console.log(this.cartqty)
       })
     },
     updateCart (item) {
