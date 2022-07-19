@@ -63,6 +63,13 @@ const routes = [
         }
       },
       {
+        path: 'shopcart',
+        component: () => import('../views/ShopingCart.vue'),
+        meta: {
+          title: '購物資訊'
+        }
+      },
+      {
         path: 'order',
         component: () => import('../views/CheckOrderView.vue'),
         meta: {

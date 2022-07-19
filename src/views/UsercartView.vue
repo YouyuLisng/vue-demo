@@ -65,7 +65,7 @@
       <div class="row">
         <div class="text-end">
           <span class="text-danger me-4 mt-2" style="font-size:24px">總計:{{ total }}</span>
-           <router-link type="button" class="btn btn-warning mb-1" to="/user/order">結帳</router-link>
+           <router-link type="button" class="btn btn-warning mb-1" to="/user/shopcart">前往購物車</router-link>
         </div>
       </div>
     </div>
@@ -83,14 +83,6 @@
         <h3 class="">商品列表</h3>
         <div class="line mx-auto"></div>
       </div>
-      <!-- <div class="mx-auto text-center">
-        <ul class="list p-0">
-          <li class="active">全部家俱</li>
-          <li class="active">沙發</li>
-          <li class="active">椅子</li>
-          <li class="active">桌子</li>
-        </ul>
-      </div> -->
       <div class="row">
         <div
           class="col-xl-3 col-lg-4 col-sm-6 px-xl-3 px-2 gy-5"
