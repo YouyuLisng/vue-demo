@@ -75,7 +75,7 @@
       </div>
       <div class="row">
         <div
-          class="col-xl-3 col-lg-4 col-sm-6 px-xl-3 px-2 gy-5"
+          class="col-xl-3 col-lg-4 col-sm-6 col-6 p-3 px-xl-3 px-2 gy-5"
           v-for="item in sortproducts"
           :key="item.id"
         >
@@ -83,7 +83,7 @@
             <div class="position-relative">
               <a href="" @click.prevent="getProduct(item.id)">
                 <div
-                  class="salepic chiar position-relative"
+                  class="chiar position-relative"
                   :style="{ backgroundImage: `url(${item.imageUrl})` }"
                 ></div>
               </a>
@@ -162,6 +162,12 @@
   cursor: pointer;
   transform: scale(1, 1);
   transition: all 1s ease-out;
+}
+@media (max-width: 576px) {
+  .chiar{
+    width: 100%;
+    height: 145px;
+  }
 }
 .productbox {
   box-shadow: 0 0 5px rgb(0 0 0 / 20%);
