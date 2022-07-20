@@ -91,4 +91,9 @@
 .salepic:hover .saleText{
     opacity: 1;
 }
+@media (max-width: 1200px){
+  .saleText{
+    opacity: 1;
+  }
+}
 </style>

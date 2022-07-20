@@ -16,6 +16,11 @@
     height: 100vh;
     position: relative;
 }
+@media(max-width:576px){
+    .banner{
+        height: 70vh;
+    }
+}
 .mask{
     position: absolute;
     height: 100%;
