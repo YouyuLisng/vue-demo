@@ -9,7 +9,6 @@
     <tr>
       <th width="120">購買時間</th>
       <th>Email</th>
-      <th width="120">購買款項</th>
       <th width="120">應付金額</th>
       <th width="100">是否付款</th>
     </tr>
@@ -18,9 +17,6 @@
     <tr v-for="item in orderproduct" :key="item.id">
       <td>{{$filters.date(item.create_at)}}</td>
       <td>{{item.user.email}}</td>
-      <td class="text-right">
-        {{item.products.product}}
-      </td>
       <td class="text-right">
         {{item.total}}元
       </td>

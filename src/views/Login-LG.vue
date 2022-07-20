@@ -29,7 +29,6 @@
             v-model="user.password"
           />
         </div>
-
         <div class="text-end mt-4">
           <button class="btn btn-lg btn-primary btn-block" type="submit">
             登入
@@ -37,6 +36,8 @@
         </div>
       </div>
     </form>
+    <p>a0979534311@gmail.com</p>
+    <p>a24751243</p>
   </div>
 </template>
 

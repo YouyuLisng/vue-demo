@@ -13,9 +13,9 @@
         <li class="nav-item">
           <router-link class="nav-link active" to="/dashboard/order">訂單</router-link>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <router-link class="nav-link active" to="/dashboard/temp">優惠卷</router-link>
-        </li>
+        </li> -->
         <li class="nav-item">
           <router-link class="nav-link active" to="/">登出</router-link>
         </li>
