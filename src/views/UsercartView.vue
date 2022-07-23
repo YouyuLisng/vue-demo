@@ -56,7 +56,7 @@
       <div class="row">
         <div class="text-end">
           <span class="text-danger me-4 mt-2" style="font-size:24px">總計:{{ total }}</span>
-           <router-link class="btn btn-warning mb-1" to="/user/order">結帳</router-link>
+           <router-link class="btn btn-warning mb-1" to="/user/shopcart">結帳</router-link>
         </div>
       </div>
     </div>
