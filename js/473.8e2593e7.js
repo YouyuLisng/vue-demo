@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_homework"]=self["webpackChunkvue_homework"]||[]).push([[473],{3473:function(e,n,u){function r(e,n){return" discount "}u.r(n),u.d(n,{default:function(){return s}});var t=u(89);const o={},c=(0,t.Z)(o,[["render",r]]);var s=c}}]);
+//# sourceMappingURL=473.8e2593e7.js.map
