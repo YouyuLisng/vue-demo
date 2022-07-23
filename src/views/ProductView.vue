@@ -1,5 +1,4 @@
 <template>
-  <Loading :active="isLoading"></Loading>
   <Nav></Nav>
   <div class="container">
     <div class="row" style="margin-top:68px;">

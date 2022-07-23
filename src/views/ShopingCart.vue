@@ -1,4 +1,5 @@
 <template>
+<Loading :active="isLoading"></Loading>
   <Nav></Nav>
   <div
     class="text-center fs-3 pt-5 mt-5 ms-4"
@@ -120,7 +121,7 @@
                     <hr>
                     <p class="col-8">總計</p>
                     <div class="col-4">{{total}}元</div>
-                    <router-link to="/user/order" type="button" class="btn btn-warning">結帳</router-link>
+                    <router-link to="/user/order" class="btn btn-warning">結帳</router-link>
                 </div>
             </div>
         </div>

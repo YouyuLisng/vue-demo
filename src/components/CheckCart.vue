@@ -31,7 +31,7 @@
     <div class="col-md-6">
         <OrderInfo></OrderInfo>
     </div>
-    <div class="col-md-6 mt-5 pt-5">
+    <div class="col-md-6 mt-5 pt-5 cartinfo">
         <div class="row">
             <div class="col-10 mx-auto shadow p-1 mb-3 bg-body rounded">
                 <div class="row m-5">
@@ -70,21 +70,23 @@
         height: 90px;
         margin: 0;
     }
+    .cartinfo{
+      padding: 0;
+    }
 }
 </style>
 
 <script>
 import Footer from '@/components/FooterView.vue'
 import OrderInfo from '@/components/OrderInfo.vue'
-import axios from 'axios'
-import { mapState } from 'pinia'
+import { mapState, mapActions } from 'pinia'
 import statusStore from '@/stores/statusStore'
-const status = statusStore()
+import cart from '@/stores/cart'
 export default {
   data () {
     return {
-      cart: {},
-      total: null
+      // cart: {},
+      // total: null
     }
   },
   components: {
@@ -92,31 +94,33 @@ export default {
     Footer
   },
   computed: {
-    ...mapState(statusStore, ['isLoading'])
+    ...mapState(statusStore, ['isLoading']),
+    ...mapState(cart, ['cart', 'total'])
   },
   methods: {
-    getCart () {
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`
-      status.isLoading = true
-      axios.get(url).then((response) => {
-        this.cart = response.data.data
-        status.isLoading = false
-        console.log(this.cart)
-        this.total = this.cart.total
-      })
-    },
-    delcart (id) {
-      //   status.cartLodaingItem = id
-      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart/${id}`
-      status.isLoading = true
-      axios.delete(url).then((response) => {
-        console.log(response)
-        status.pushMessage({ title: '移除購物車品項', content: response.data.message })
-        // status.cartLodaingItem = ''
-        this.getCart()
-        status.isLoading = false
-      })
-    }
+    ...mapActions(cart, ['getCart', 'delcart'])
+    // getCart () {
+    //   const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`
+    //   status.isLoading = true
+    //   axios.get(url).then((response) => {
+    //     this.cart = response.data.data
+    //     status.isLoading = false
+    //     console.log(this.cart)
+    //     this.total = this.cart.total
+    //   })
+    // },
+    // delcart (id) {
+    //   //   status.cartLodaingItem = id
+    //   const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart/${id}`
+    //   status.isLoading = true
+    //   axios.delete(url).then((response) => {
+    //     console.log(response)
+    //     status.pushMessage({ title: '移除購物車品項', content: response.data.message })
+    //     // status.cartLodaingItem = ''
+    //     this.getCart()
+    //     status.isLoading = false
+    //   })
+    // }
   },
   created () {
     this.getCart()

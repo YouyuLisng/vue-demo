@@ -168,6 +168,11 @@
     order: 2;
   }
 }
+@media (min-width: 1400px){
+  .arrinner{
+    padding: 1.5em;
+  }
+}
 </style>
 <script>
 import 'animate.css'
