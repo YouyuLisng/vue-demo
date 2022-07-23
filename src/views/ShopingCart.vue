@@ -1,5 +1,4 @@
 <template>
-<Loading :active="isLoading"></Loading>
   <Nav></Nav>
   <div
     class="text-center fs-3 pt-5 mt-5 ms-4"

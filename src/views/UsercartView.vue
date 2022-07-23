@@ -26,7 +26,7 @@
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+    <h5 id="offcanvasRightLabel">購物清單</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
@@ -56,7 +56,7 @@
       <div class="row">
         <div class="text-end">
           <span class="text-danger me-4 mt-2" style="font-size:24px">總計:{{ total }}</span>
-           <router-link class="btn btn-warning mb-1" to="/user/shopcart">前往購物車</router-link>
+           <router-link class="btn btn-warning mb-1" to="/user/order">結帳</router-link>
         </div>
       </div>
     </div>
