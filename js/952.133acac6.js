@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_homework"]=self["webpackChunkvue_homework"]||[]).push([[952],{1952:function(e,r,n){n.r(r),n.d(r,{default:function(){return f}});var t=n(3396);const o={class:"container-fulid"};function u(e,r,n,u,s,c){const i=(0,t.up)("Toast"),a=(0,t.up)("router-view");return(0,t.wg)(),(0,t.iD)("div",o,[(0,t.Wm)(i),(0,t.Wm)(a)])}var s=n(4364),c=n(5820),i={components:{Toast:s.Z},provide(){return{emitter:c.Z}}},a=n(89);const v=(0,a.Z)(i,[["render",u]]);var f=v}}]);
+//# sourceMappingURL=952.133acac6.js.map
