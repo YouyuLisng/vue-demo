@@ -24,7 +24,7 @@
       </div>
     </button>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" ref="Offcanvas">
   <div class="offcanvas-header">
     <h5 id="offcanvasRightLabel">購物清單</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -56,7 +56,7 @@
       <div class="row">
         <div class="text-end">
           <span class="text-danger me-4 mt-2" style="font-size:24px">總計:{{ total }}</span>
-           <router-link class="btn btn-warning mb-1" to="/user/shopcart">結帳</router-link>
+          <button type="button" class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" @click="hideCart" >前往購物車</button>
         </div>
       </div>
     </div>
@@ -246,8 +246,8 @@ export default {
   methods: {
     ...mapActions(productList, ['getProducts']),
     ...mapActions(cart, ['addToCart', 'getCart', 'delcart', 'updateCart']),
-    showOffcanvasMenu () {
-      this.showMenu ? this.showMenu = false : this.showMenu = true
+    hideCart () {
+      this.$router.push('/user/shopcart')
     },
     getProduct (id) {
       this.$router.push(`/user/product/${id}`)

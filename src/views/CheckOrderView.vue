@@ -1,4 +1,4 @@
-<template>
+<template style="overflow: unset;">
 <Nav></Nav>
 <Shop></Shop>
 <CartList></CartList>
